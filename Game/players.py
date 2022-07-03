@@ -1,13 +1,13 @@
 class Players:
-    def __init__(self, name, hp, atk, damage):
+    def __init__(self, name, hp, atk, p_damage):
         self.name = name
         self.hp = hp
         self.atk = atk
-        self.damage = damage
+        self.p_damage = p_damage
 
     hp = 100
     atk = 10
-    damage = hp - atk
+    p_damage = 0
 
     def get_name(self):
         return self.name
@@ -19,4 +19,5 @@ class Players:
         return self.atk
 
     def get_damage(self):
-        return self.damage
+        return self.p_damage
+
