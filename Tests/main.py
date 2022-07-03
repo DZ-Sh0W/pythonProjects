@@ -17,4 +17,4 @@ choose = input("Player to attack : ")
 
 if choose in [players[1], "1"]:
     print("Ba333", players[1]) 
-    walid hmar
+   
