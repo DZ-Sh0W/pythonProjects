@@ -16,7 +16,7 @@ weapon1 = Weapons("AK47", 30)
 weapon2 = Weapons("Knife", 20)
 weapon3 = Weapons("Shotgun", 90)
 
-print("Choose a weapons from the list below :", "\n", "1/ Punch", "\n", "2/ AK47", "\n", "3/ Knife", "\n", "4/ Shotgun")
+print("Choose a weapon from the list below :", "\n", "1/ Punch", "\n", "2/ AK47", "\n", "3/ Knife", "\n", "4/ Shotgun")
 print()
 
 choose = input("Your weapon : ")
