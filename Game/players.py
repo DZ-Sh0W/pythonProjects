@@ -5,10 +5,6 @@ class Players:
         self.atk = atk
         self.p_damage = p_damage
 
-    hp = 100
-    atk = 10
-    p_damage = 0
-
     def get_name(self):
         return self.name
 
@@ -20,4 +16,3 @@ class Players:
 
     def get_damage(self):
         return self.p_damage
-
