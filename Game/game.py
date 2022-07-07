@@ -15,36 +15,29 @@ for i in range(leng):
 print(liste[0], "attack first.")
 print()
 
-weapon1 = Weapons("AK47", 30)
-weapon2 = Weapons("Knife", 20)
-weapon3 = Weapons("Shotgun", 90)
+print("your available weapons")
+
+wp0 = [input("0) enter a weapon"), int(input("enter attack :"))]
+wp1 = [input("1) enter a weapon"), int(input("enter attack :"))]
+wp2 = [input("2) enter a weapon"), int(input("enter attack :"))]
+wp3 = [input("3) enter a weapon"), int(input("enter attack :"))]
+
+weapon0 = Weapons(wp0[0], wp0[1])
+weapon1 = Weapons(wp1[0], wp1[1])
+weapon2 = Weapons(wp2[0], wp2[1])
+weapon3 = Weapons(wp3[0], wp3[1])
+
+weapons = [weapon0, weapon1, weapon2, weapon3]
 
 choose = int(input("Player to attack : "))
-print()
 
 if 0 <= choose-1 < leng:
-    print("Choose a weapon from the list below :", "\n", "1/ Punch", "\n", "2/ AK47", "\n", "3/ Knife", "\n",
-          "4/ Shotgun")
-    print()
-    choice = input("Your weapon : ")
-    print()
-    if choice in ["1", "Punch"]:
-        Players.p_damage = player.hp - player.atk
-        print("You have damaged", player.get_name()[choose-1], "by punch, with", player.atk, "points.")
-        print("Now, his remain health is", Players.p_damage, "points.")
-    elif choice in ["2", "AK47"]:
-        Players.p_damage = player.hp - weapon1.get_weapon_attack()
-        print("You have damaged", player.get_name()[choose-1], "by AK47, with", weapon1.get_weapon_attack(), "points.")
-        print("Now, his remain health is", Players.p_damage, "points.")
-    elif choice in ["3", "Knife"]:
-        Players.p_damage = player.hp - weapon2.get_weapon_attack()
-        print("You have damaged", player.get_name()[choose-1], "by Knife, with", weapon2.get_weapon_attack(), "points.")
-        print("Now, his remain health is", Players.p_damage, "points.")
-    elif choice in ["4", "Shotgun"]:
-        Players.p_damage = player.hp - weapon3.get_weapon_attack()
-        print("You have damaged", player.get_name()[choose-1], "by Shotgun, with", weapon3.get_weapon_attack(), "points.")
+    choice = int(input("Choose your weapon from 0 to 3: "))
+    if 0 <= choice < 4:
+        Players.p_damage = player.hp - weapons[choice].get_weapon_attack()
+        print("You have damaged", player.get_name()[choose-1], "by", weapons[choice].get_weapon_name(), "with", weapons[choice].get_weapon_attack(), "points.")
         print("Now, his remain health is", Players.p_damage, "points.")
     else:
-        print("Weapon not found !")
+        print("Error !")
 else:
     print("Unknown !")
