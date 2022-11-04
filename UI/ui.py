@@ -3,7 +3,7 @@ import webbrowser
 
 
 def open_button():
-    webbrowser.open_new("https://github.com/DZ-Sh0W")
+    webbrowser.open_new("https://github.com/WaLiD-DK")
 
 
 window = Tk()
